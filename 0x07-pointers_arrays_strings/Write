@@ -1,0 +1,4 @@
+
+
+eturns the number of bytes in the initial segment of s which consist only of bytes from accept
+FYI: The standard library provides a similar function: strspn. Run man strspn to learn more
