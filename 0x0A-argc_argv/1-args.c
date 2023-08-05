@@ -6,10 +6,15 @@
  * @argv: arguement vector
  * Return: 0
  */
+
 int main(int argc, char *argv[])
 {
-	(void) argv;
+	int i = 0;
 
-	printf("%d\n", argc);
+	printf("%d\n", argc - 1);
+	if (i > argc)
+	{
+		printf("%s", argv[i]);
+	}
 	return (0);
 }
