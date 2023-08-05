@@ -1,19 +1,16 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - prints the name of the program
  * @argc: number of arguement
  * @argv: Array of arguements
+ * Return:0
  */
+
 int main(int argc, char *argv[])
 {
-	int i;
+	(void) argc;
 
-	for (i = 0; i < argc; i++)
-	{
-		printf("%s\n", argv[0]);
-	}
-
+	printf("%s\n", argv[0]);
 	return (0);
 }
