@@ -1,18 +1,23 @@
+#include <stdlib.h>
 #include "dog.h"
+
 /**
- * init_dog - Initialize Dog
- * @d: Dog Function declaration
- * @name: Name of Dog for the function
- * @age: Age of Dog for  the function
- * @owner:  owner of Dog
- * Return: return Null
+ * init_dog - Initalize dog function
+ * @d: Function of Dog
+ * @name: The Dog name
+ * @age: The Dog age
+ * @owner: The Dog owner
+ *
+ * Return: Null
  */
+
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d)
-	{
+	if (d == NULL)
+	
+		d = malloc(sizeof(struct dog));
 		d->name = name;
 		d->age = age;
 		d->owner = owner;
-	}
+	
 }
