@@ -2,17 +2,16 @@
 #include <stdlib.h>
 
 /**
- * main - Prints the opcodes of itelf
- * @argc: This is the number of arguments supplied to the program
- * @argv: An array of pointer to the arguments.
- * Return: 
+ * main - check the code for Holberton School students.
+ * @argc: argument count.
+ * @argv: argument vector.
+ *
+ * Return: Always 0.
  */
-
 int main(int argc, char *argv[])
 {
-	int bytes, index;
-	int (*address)(int, char **) = main;
-	unsigned char opcode;
+	char *opc = (char *) main;
+	int i, nbytes;
 
 	if (argc != 2)
 	{
@@ -20,29 +19,21 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	bytes = atoi(argv[1]);
+	nbytes = atoi(argv[1]);
 
-	if (bytes < 0)
+	if (nbytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-	for (i = 0; i < bytes; i++)
+	for (i = 0; i < nbytes; i++)
 	{
-		opcode = *(unsigned char *)address;
-		printf("%.2x", opcode);
-
-		if (i == bytes - 1)
-		{
-			continue;
-
-		printf(" ");
-
-		address++;
-		}
+		printf("%02x", opc[i] & 0xFF);
+		if (i != nbytes - 1)
+			printf(" ");
 	}
-	printf("\n");
 
+	printf("\n");
 	return (0);
 }
