@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * add_note - This a function that adds a new node at the beginning
+ * add_node - This a function that adds a new node at the beginning
  * @head: head of the linked list
  * @str: string
  * Return: Adress
