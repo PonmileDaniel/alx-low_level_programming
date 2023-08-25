@@ -1,6 +1,6 @@
 section .data
     hello_msg db "Hello, Holberton", 0
-    format db "%s", 10, 0 ; "%s" is the format for the string, 10 is the newline, 0 terminates the format string
+    format db "%s", 10, 0
 
 section .text
     global main
@@ -12,8 +12,8 @@ main:
     xor rax, rax
     call printf
 
-    xor rdi, rdi      ; Clear RDI for the return value (0)
-    mov rax, 60       ; System call number for exit
+    xor rdi, rdi      
+    mov rax, 60      
     syscall
 
 
