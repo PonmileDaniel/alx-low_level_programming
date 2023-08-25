@@ -12,8 +12,6 @@ main:
     xor rax, rax
     call printf
 
-    xor rdi, rdi      
-    mov rax, 60      
-    syscall
+    ret
 
 
