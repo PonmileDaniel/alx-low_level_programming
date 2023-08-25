@@ -1,7 +1,8 @@
 #include "lists.h"
 #include <string.h>
 #include <stdlib.h>
-#include <stdlib.h>
+#include <stddef.h>
+#include <stdio.h>
 /**
  * add_note- This a function that adds a new node at the beginning
  * @head: head of the linked list
@@ -11,7 +12,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
-	unsigned int length = 0;
+	size_t length = 0;
 
 	while (str[length])
 	{
