@@ -11,7 +11,8 @@ main:
     mov rsi, hello_msg
     xor rax, rax
     call printf
-
+    xor rdi, rdi
+    mov rax, 60
     ret
 
 
