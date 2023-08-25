@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "lists.h"
 
+void print(void) __attribute__ ((constructor));
+
 /**
  * print - chechk code
  */
