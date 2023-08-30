@@ -25,7 +25,7 @@ size_t looped_listint_len(const listint_t *head)
 	{
 		if (sluggish == quick)
 		{
-			sluggish = quick;
+			sluggish = head;
 			while (sluggish != quick)
 			{
 				nodes++;
