@@ -3,7 +3,7 @@
 /**
  * get_nodeint_at_index - get node
  * @head: node head
- * @Index: node index
+ * @index: node index
  * Return: poinyer to the node
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
