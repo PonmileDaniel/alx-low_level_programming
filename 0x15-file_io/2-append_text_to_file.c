@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * create_file - This func that create a file
+ * append_text_to_file - This func that create a file
  * @filename: A pointer to the name of the file that will be created
- * @text_context:  A pointer to a string 
+ * @text_content: The string to add to the end of the file
  * Return: If the func fails -1
  */
 int append_text_to_file(const char *filename, char *text_content)
@@ -19,7 +19,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	a = open(filename, O_WRONLY | O_APPEND);
 	b = write(a, text_content, length);
-	
 	if (a == -1 || b == -1)
 		return (-1);
 	close(a);
