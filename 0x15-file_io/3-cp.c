@@ -6,7 +6,7 @@ char *create_buffer(char *file);
 void close_file(int fd);
 /**
  * create_buffer - Allocate 1024 for a buff
- * @file: The name of the file buffer 
+ * @file: The name of the file buffer
  * Return: A pointer to the newly-allocated buffer
  */
 char *create_buffer(char *file)
@@ -30,11 +30,12 @@ char *create_buffer(char *file)
 void close_file(int fd)
 {
 	int c;
+
 	c = close(fd);
 
 	if (c == 1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fd %d\n",fd);
+		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd);
 		exit(100);
 	}
 }
