@@ -33,7 +33,7 @@ void close_file(int fd)
 
 	c = close(fd);
 
-	if (c == 1)
+	if (c == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd);
 		exit(100);
