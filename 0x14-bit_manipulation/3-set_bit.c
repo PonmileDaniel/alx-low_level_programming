@@ -3,6 +3,7 @@
  * set_bit - set the bit of a number to the vslue of 1
  * @n: points to the bit to be manipulated
  * @index: position of the bit
+ * Return: 1
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
