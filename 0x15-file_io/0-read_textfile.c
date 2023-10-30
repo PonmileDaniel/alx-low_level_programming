@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * read_textfile - func that reads a trxt file and prints it
- * filename: pointer to a string
- * letters: number of letters printed
+ * @filename: pointer to a string
+ * @letters: number of letters printed
  * Return: number of letter printed
  */
 ssize_t read_textfile(const char *filename, size_t letters)
