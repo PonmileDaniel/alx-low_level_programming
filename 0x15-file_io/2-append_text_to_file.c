@@ -21,12 +21,12 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (text_content)
 	{
-		for (letterno = 0; text_content[letterno];)
-			letterno++;
+		for (letterno = 0; text_content[letterno]; letterno++)
+		o = write(filedesc, text_content, letterno);
+
+		if (o == -1)
+			return (-1);
 	}
-	o = write(filedesc, text_content, letterno);
-	if (filedesc == -1 || o == -1)
-		return (-1);
-	close(o);
+	close(filedesc);
 	return (1);
 }
