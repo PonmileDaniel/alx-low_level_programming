@@ -11,22 +11,23 @@ int append_text_to_file(const char *filename, char *text_content)
 	int letterno;
 	int o;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
 	filedesc = open(filename, O_WRONLY | O_APPEND);
-
-	if (filedesc == -1)
-		return (-1);
+		
+		if (filedesc == -1)
+			return (-1);
 
 	if (text_content)
 	{
-		for (letterno = 0; text_content[letterno]; letterno++)
-		o = write(filedesc, text_content, letterno);
-
-		if (o == -1)
-			return (-1);
+		for (letterno = 0; text_content[letterno];)
+			letterno++;
 	}
+	o = write(filedesc, text_content, letterno);
+	if (o == -1)
+		return (-1);
 	close(filedesc);
+
 	return (1);
 }
