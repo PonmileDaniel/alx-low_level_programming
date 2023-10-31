@@ -17,7 +17,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content == NULL)
 		text_content = "";
-	for (letterno = 0; text_content[lettern]; letterno++)
+	for (letterno = 0; text_content[letterno]; letterno++)
 		;
 	w = write(filedesc, text_content, letterno);
 
