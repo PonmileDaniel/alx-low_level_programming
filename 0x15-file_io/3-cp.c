@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
 	int file_from, file_to, close_error;
 	ssize_t charn, w;
 	char buffer[1024];
+
 	charn = 1024;
 
 	if (argc != 3)
@@ -40,7 +41,7 @@ int main(int argc, char *argv[])
 	}
 
 	file_from = open(argv[1], O_RDONLY);
-        file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
+	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
 	print_error(file_from, file_to, argv);
 
 	while (charn == 1024)
