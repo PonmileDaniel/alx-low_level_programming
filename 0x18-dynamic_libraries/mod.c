@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
-* add - sub two int
+* mod - two int
 * @a: first int
 * @b: second int
-* Return: subtract
+* Return: final answer
 */
-int sub(int a, int b)
+int mod(int a, int b)
 {
-    return (a - b);
+    return (a % b);
 }
