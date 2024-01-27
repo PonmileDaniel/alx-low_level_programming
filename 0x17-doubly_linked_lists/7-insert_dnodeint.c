@@ -1,6 +1,11 @@
 #include "lists.h"
 
 /**
+ * insert_dnodeint_at_index - func that insert a new node
+ * @h: head of the list
+ * @idx: index of the node
+ * @n: value of thehe node
+ * Return: return the address of the node
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -8,10 +13,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int i;
 
 	if (new_node == NULL)
-	{
 		return (NULL);
-	}
-
 	new_node->n = n;
 
 	if (idx == 0)
@@ -40,11 +42,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		new_node->prev = curr;
 		new_node->next = curr->next;
-
 		if (curr->next != NULL)
-		{
 			curr->next->prev = new_node;
-		}
+
 		curr->next = new_node;
 	}
 	return (new_node);
