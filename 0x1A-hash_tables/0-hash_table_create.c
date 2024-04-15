@@ -1,10 +1,10 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_create - Create a hash table with a given size
+ * hash_table_create - create a hash table
  * @size: size of the hash table
- * Return: Created hash table, or NULL  if func fails
-*/
+ * Return: create hash table, or NULL if func fails
+ */
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new_table;
