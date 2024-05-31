@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains the island_perimeter"""
 
+
 def island_perimeter(grid):
     """Fun that return the perinter """
     perimeter = 0
@@ -11,7 +12,7 @@ def island_perimeter(grid):
         ncolums = len(grid[0])
 
     for a in range(nrow):
-        for c in range(ncolums):
+        for b in range(ncolums):
             if grid[a][b] == 1:
                 if (a - 1) == -1 or grid[a - 1][b] == 0:
                     perimeter += 1
